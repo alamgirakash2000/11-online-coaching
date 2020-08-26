@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+.header {
+  background: rgba(0, 0, 0, 0.555);
+}
+.search {
+  opacity: 0.8;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.course {
+  animation: courseAnime 0.4s ease-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.card {
+  box-shadow: 5px 5px 10px gray;
+}
+
+@keyframes courseAnime {
+  0% {
+    transform: scale(0) rotateY(90deg) rotateX(45deg);
+  }
+  100% {
+    transform: scale(1) rotateY(0deg) rotateX(0);
+    transition: transform cubic-bezier(0.83, 0, 0.17, 1);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.enroll-btn {
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  background: #ec5252;
+  color: #fff;
+}
+
+.enroll-btn:hover {
+  background: red;
+}
+
+.wishlist-btn {
+  outline: none;
+  border: none;
+  background: none;
+  color: rgb(233, 13, 13);
+}
+.wishlist-btn:hover {
+  color: rgb(39, 76, 141);
+}
+
+.enrolled {
+  background: rgba(255, 255, 255, 0.829);
+  color: #000;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+}
+
+.sub-course {
+  object-fit: contain;
+  background: #264b8c;
+  border-radius: 5px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: #fff;
+  overflow: hidden;
+}
+
+.sub-course img {
+  width: 20%;
+  margin-right: 5px;
+}
+.remove-button {
+  border: none;
+  background: tomato;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  padding: 2px 6px;
 }
