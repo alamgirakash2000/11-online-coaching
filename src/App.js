@@ -10,8 +10,8 @@ import Wishlist from "./components/WishList";
 function App() {
   const [courses, setCourses] = useState(data);
   const [query, setQuery] = useState("");
-  const [enrolled, setEnrolled] = useState(data.slice(0, 3));
-  const [wishlist, setWishlist] = useState(data.slice(3, 6));
+  const [enrolled, setEnrolled] = useState([]);
+  const [wishlist, setWishlist] = useState([]);
 
   useEffect(() => {
     let tempData = data.filter((course) =>
