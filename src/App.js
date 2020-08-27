@@ -13,6 +13,7 @@ function App() {
   const [enrolled, setEnrolled] = useState([]);
   const [wishlist, setWishlist] = useState([]);
 
+  // Get the searched data
   useEffect(() => {
     let tempData = data.filter((course) =>
       course.name.toLowerCase().includes(query.toLowerCase())
@@ -22,11 +23,14 @@ function App() {
 
   return (
     <div className="app">
+      {/*Header Section*/}
       <Header query={query} setQuery={setQuery} />
+
       <div className="container">
         <h2 className="text-center my-4">Our Courses</h2>
         <div className="row">
           <div className="col-md-8">
+            {/* Courses section */}
             <div className="row courses">
               {!courses.length && <h2>Sorry!! No courses found.</h2>}
               {courses.map((course) => (
@@ -42,11 +46,13 @@ function App() {
             </div>
           </div>
 
+          {/* Enrolled Section */}
           <div className="col-md-4">
             <div className="row">
               <Enrolled enrolled={enrolled} setEnrolled={setEnrolled} />
             </div>
 
+            {/* Wishlist section */}
             <div className="row">
               <Wishlist wishlist={wishlist} setWishlist={setWishlist} />
             </div>
